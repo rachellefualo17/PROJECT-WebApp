@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rachelle | PORTFOLIO WEBSITE</title>
+</head>
+<body>
+    <div class="container">
+    <div class="showSlider fade">
+        <div class="numbertext">1 / 4</div>
+      <img src="/images/beautiful-girl-in-the-hawaiian-landscape-1920x1080_787664-mm-90.webp" alt="">
+    </div>
+    <div class="showSlider fade">
+        <div class="numbertext">2 / 4</div>
+        <img src="/images/321049259_702905251203620_4417357926131203743_n.jpg" alt = "fam4"/>
+    </div>
+    <div class="showSlider fade">
+        <div class="numbertext">3 / 4</div>
+        <img src="./images/fam..jpg" alt="fam"/>
+    </div>
+    <div class="showSlider fade">
+        <div class="numbertext">4 / 4</div>
+        <img src="./images/fam1.jpg" alt= "fam1"/>
+    </div> 
+
+    <a class="left" onclick="nextSlide(-1)">&#10094;</a>
+    <a class="right" onclick="nextSlide(1)">&#10095;</a>
+    </div> 
+
+    <script>
+        var slide_index = 1;
+
+slidesDisplay(slide_index);
+    function nextSlide(n) {
+    slidesDisplay(slide_index += n);
+    }
+    function currentSlide(n) {
+    slidesDisplay(slide_index = n);
+    }
+    function slidesDisplay(n) {
+        var i;
+        var slides = document.getElementsByClassName("showSlider");
+
+    if (n > slides.length) { slide_index = 1 }
+    if (n < 1) { slide_index = slides.length }
+        for (i = 0; i < slides.length; i++) {
+
+    slides[i].style.display = "none";
+    }
+    slides[slide_index - 1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
+
+    </script>
+</body>
+</html>
